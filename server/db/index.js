@@ -6,10 +6,10 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  // password: null? may not need this
+  password: '',
   database: 'chat'
 });
 //export this?
-connection.connect();
+module.exports.connection = connection;
 
 
