@@ -10,6 +10,6 @@ var connection = mysql.createConnection({
   database: 'chat'
 });
 //export this?
-module.exports.connection = connection;
+module.exports.dbconnection = () => connection;
 
 
