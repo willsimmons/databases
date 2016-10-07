@@ -1,0 +1,196 @@
+/*body {
+  background: #fafaff;
+  height: 100%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  color: #444;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+button:active,
+button:focus,
+button:hover {
+  border: none;
+  padding: 8px;
+  color: white;
+  background: rgba(0, 205, 153, 1);
+  transition: background 0.2s ease;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(0, 205, 153, 0.55);
+}
+
+input {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 0 8px;
+  transition: border 0.2s ease;
+}
+
+input:active,
+input:focus {
+  border: 1px solid rgba(0, 205, 153, 1);
+}
+
+#new-room {
+  padding: 8px 8px 9px 8px;
+  position: relative;
+  top: -2px;
+}
+
+.add-room {
+  margin-left: -4px;
+}
+
+h1, h2 {
+  font-family: 'Pattaya', serif;
+  margin: 0;
+  /*text-transform: uppercase;*/
+}
+
+.friendname {
+  cursor: pointer;
+}
+
+.username {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.username:hover {
+  transform: translateX(8px);
+}
+
+.friend-message {
+  font-weight: 800;
+  border: 1px solid red;
+}
+
+.hidden-message {
+  display: none;
+}
+
+.left {
+  width: 70%;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.right {
+  width: 30%;
+  padding: 2em;
+  height: 95%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.top{
+  height: 25%;
+  margin-bottom: 1em;
+}
+
+#chats{
+  height: 70%;
+  overflow: scroll;
+  padding: 1em;
+  flex-grow: 1;
+  background: #fff;
+  box-shadow: 1px 1px 4px 1px #ccc inset;
+}
+
+.user-input{
+  padding-top: 1em;
+  height: 5%;
+}
+
+#roomSelect{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  overflow: scroll;
+  height: 50%;
+}
+
+.roomname {
+  width: 23%;
+  font-size: 0.8em;
+  white-space: nowrap;
+  border: 1px grey solid;
+  border-radius: 4px;
+  margin: 2px 0;
+  text-align: center;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.room-input-container {
+  padding-top: 2em;
+}
+
+.active-room {
+  color: #fff;
+  background-color: rgba(0, 205, 153, 1);
+  border-color: rgba(0, 205, 153, 1);
+}
+
+.people-container {
+  background: #fff;
+  padding: 2em;
+  height: 47.5%;
+  box-shadow: 1px 1px 4px 1px #ccc;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.people-list {
+  overflow: scroll;
+}
+
+#send {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#message {
+  margin-left: 2em;
+  flex-grow: 1;
+}
+
+.input-label {
+  font-size: 0.5em;
+  position: absolute;
+  top: -14px;
+  left: 0;
+}*/

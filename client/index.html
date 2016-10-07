@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pattaya" rel="stylesheet">
+
+    <!-- dependencies -->
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- your scripts -->
+    <script src="env/config.js"></script>
+    <script src="scripts/app.js"></script>
+  </head>
+  <body>
+
+
+
+    <div class='left'>
+
+      <div class='top'>
+        <h1>Chatterbox</h1>
+        <div id="roomSelect"></div>
+        <div class="room-input-container">
+          <input id="new-room"></input>
+          <button class="add-room">Add room</button>
+        </div>
+      </div>
+
+      <div id='chats'>
+      </div>
+
+      <div class='user-input'>
+        <div id='send'>
+          <span class="input-label">Username</span>
+          <input id="my-name" value="User"></input>
+          <input id="message" placeholder="Type message here..."></input>
+          <button class="submit">Submit</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class='right'>
+      <div id="friends" class='people-container'>
+        <h2>Friend List</h2>
+        <ul class='people-list'></ul>
+      </div>
+      <div class='people-container'>
+        <h2>User List</h2>
+        <ul id="user-list" class='people-list'></ul>
+      </div>
+    </div>
+
+
+  </body>
+</html>

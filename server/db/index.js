@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
   password: '',
   database: 'chat'
 });
-//export this?
+
 module.exports.dbconnection = () => connection;
 
 
