@@ -9,7 +9,7 @@ var htmlEncode = function(value) {
   // be default
 
 var app = {
-  server: 'http://127.0.0.1:8080/classes/messages',
+  server: 'localhost:3000',
   users: {},
   appUsername: 'no one and everyone',
   friends: {},
