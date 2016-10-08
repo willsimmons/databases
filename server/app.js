@@ -12,9 +12,6 @@ var router = require('./routes.js');
 var app = express();
 module.exports.app = app;
 
-//db builder
-var connect = db.connection.connect();
-
 db.connection.query('SELECT * FROM USERS', function(err, results) {
   if (err) {
     console.log('boo');

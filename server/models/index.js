@@ -7,12 +7,12 @@ module.exports = {
     post: function (data) {
       console.log(data);
       console.log(db);
-      db.connect.connection.query('INSERT INTO chat VALUES ', data, function(err, result) {
-        if (err) {
-          throw err;
-        }
-        console.dir('message entered');
-      });
+      // db.connection.connect.query('INSERT INTO chat VALUES ', data, function(err, result) {
+      //   if (err) {
+      //     throw err;
+      //   }
+      //   console.dir('message entered');
+      // });
     } // a function which can be used to insert a message into the database
   },
 
