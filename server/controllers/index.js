@@ -6,7 +6,7 @@ module.exports = {
       models.messages.get()
       .then((data) => {
         // console.log(data); //when empty, empty array is returned
-        res.sendStatus(200);
+        res.status(200).send(data);
       }).catch((e) => res.sendStatus(400));
     },
     post: function (req, res) {

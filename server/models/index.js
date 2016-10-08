@@ -4,7 +4,7 @@ module.exports = {
   messages: {
     get: function () {
       return new Promise(function(resolve, reject) {
-        db.connection.query('SELECT * FROM messages;', function(err, data) {
+        db.connection.query('SELECT * FROM messages m INNER JOIN users u WHERE u.id=m.usernameID ORDER BY u.id DESC;', function(err, data) {
           if (err) {
             reject(err);
           } else {
@@ -55,7 +55,6 @@ module.exports = {
       }
     },
     post: function (obj) {
-      console.log(obj);
       return new Promise(function(resolve, reject) {
         db.connection.query('INSERT INTO users SET ?', obj, 
           function(err, data) {
