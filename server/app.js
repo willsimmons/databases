@@ -1,6 +1,6 @@
 var express = require('express');
 var db = require('./db');
-var connection = require('./db/index').dbconnection;
+// var connection = require('./db/index').database;
 
 // Middleware
 var morgan = require('morgan');
@@ -13,7 +13,14 @@ var app = express();
 module.exports.app = app;
 
 //db builder
-connection();
+var connect = db.connection.connect();
+
+db.connection.query('SELECT * FROM USERS', function(err, results) {
+  if (err) {
+    console.log('boo');
+  }
+  console.dir(results);
+});
 // Set what we are listening on.
 app.set('port', 3000);
 

@@ -5,17 +5,9 @@ module.exports = {
     get: function (req, res) {
       console.dir('made connect');
       res.sendStatus(200);
-
     }, // a function which handles a get request for all messages
-    post: function (req, res) {
-      // connection.query('', function(error, rows, fields) {
-      //   if (error) {
-      //     throw error;
-      //   }
-      //   console.log('rows', rows, 'fields', fields);
-      // });
-      console.log('made connect');
-      models.messages.post();
+    post: function (req, res) { 
+      models.messages.post(req.body);
       res.sendStatus(203);
     } // a function which handles posting a message to the database
   },
