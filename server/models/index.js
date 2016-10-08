@@ -1,7 +1,5 @@
 var db = require('../db');
 
-// var connection = require('../db/index').database;
-
 module.exports = {
   messages: {
     get: function () {
@@ -16,16 +14,15 @@ module.exports = {
       });
     }, // a function which produces all the messages
     post: function (obj) {
-      // return new Promise(function(resolve, reject) {
-      //   db.connection.query('INSERT INTO messages VALUES ('+ obj.
-      //     , function(err, data) {
-      //     if (err) {
-      //       reject(err);
-      //     } else {
-      //       resolve(data);
-      //     }
-      //   });
-      // });
+      return new Promise(function(resolve, reject) {
+        db.connection.query('INSERT INTO messages SET ?', obj, function(err, data) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve('Message successfully added');
+          }
+        });
+      });
     } // a function which can be used to insert a message into the database
   },
 
@@ -56,13 +53,12 @@ module.exports = {
     },
     post: function (obj) {
       return new Promise(function(resolve, reject) {
-        console.log(obj);
         db.connection.query('INSERT INTO users SET ?', obj, 
           function(err, data) {
             if (err) {
               reject(err);
             } else {
-              resolve(obj.username + 'successfully added.');
+              resolve(data.insertId);
             }
           });
       });
