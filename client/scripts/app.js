@@ -47,6 +47,7 @@ var app = {
     });
   },
   send: function(message) {
+    var context = this;
     $.ajax({
       url: this.server + '/messages',
       type: 'POST',
@@ -54,6 +55,7 @@ var app = {
       contentType: 'application/json',
       success: function (data) {
         console.log('chatterbox: Message sent');
+        context.refreshFeed();
       },
       error: function (data) {
         console.error('chatterbox: Failed to send message', data);
@@ -118,7 +120,6 @@ var app = {
       roomname: this.activeRoom
     };
     this.send(message);
-    this.refreshFeed();
     $('#message').val('');
   },
   handleAddRoom: function(roomname) {
