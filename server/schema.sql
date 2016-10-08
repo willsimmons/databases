@@ -5,7 +5,7 @@ USE chat;
 CREATE TABLE users (
   id INTEGER(4) NOT NULL AUTO_INCREMENT,
   username VARCHAR(50),
-  PRIMARY KEY (id)/* Describe your table here.*/
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE messages (
@@ -18,8 +18,6 @@ CREATE TABLE messages (
 );
 
 /* Create other tables and define schemas for them here! */
-
-
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql
