@@ -9,7 +9,7 @@ var htmlEncode = function(value) {
   // be default
 
 var app = {
-  server: '127.0.0.1:3000/classes',
+  server: 'http://localhost:3000/classes',
   users: {},
   appUsername: 'no one and everyone',
   friends: {},
@@ -62,7 +62,7 @@ var app = {
   },
   fetch: function(callback) {
     $.ajax({
-      url: this.server,
+      url: this.server + '/messages',
       type: 'GET',
       success: callback,
       error: callback
@@ -72,7 +72,7 @@ var app = {
     $('#chats').html('');
   },
   renderMessage: function(message) {
-    var cleanMessageText = htmlEncode(message.text);
+    var cleanMessageText = htmlEncode(message.message);
     var cleanUsername = htmlEncode(message.username);
     var cleanRoomname = htmlEncode(message.roomname);
     var className = 'message';
@@ -127,7 +127,7 @@ var app = {
   },
   refreshFeed: function() {
     this.fetch(function (data) {
-      data = JSON.parse(data);
+      // data = JSON.parse(data);
 
       this.clearMessages();
 
