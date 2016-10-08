@@ -19,7 +19,7 @@ module.exports = {
         }
       }).then((log) => { 
         if (!!Number(log)) {
-          return models.messages.post({'usernameID': log, 'message': req.body.text, 'roomname': req.body.roomname});        
+          return models.messages.post({'usernameID': log, 'message': req.body.text.toString(), 'roomname': req.body.roomname});        
         } else {
           res.sendStatus(201);
         }

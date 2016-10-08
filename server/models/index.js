@@ -14,11 +14,14 @@ module.exports = {
       });
     }, // a function which produces all the messages
     post: function (obj) {
+      console.log(obj);
       return new Promise(function(resolve, reject) {
         db.connection.query('INSERT INTO messages SET ?', obj, function(err, data) {
           if (err) {
+            console.log('err');
             reject(err);
           } else {
+            console.log(data);
             resolve('Message successfully added');
           }
         });
@@ -52,6 +55,7 @@ module.exports = {
       }
     },
     post: function (obj) {
+      console.log(obj);
       return new Promise(function(resolve, reject) {
         db.connection.query('INSERT INTO users SET ?', obj, 
           function(err, data) {

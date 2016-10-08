@@ -9,7 +9,7 @@ var htmlEncode = function(value) {
   // be default
 
 var app = {
-  server: 'localhost:3000',
+  server: '127.0.0.1:3000/classes',
   users: {},
   appUsername: 'no one and everyone',
   friends: {},
@@ -48,7 +48,7 @@ var app = {
   },
   send: function(message) {
     $.ajax({
-      url: this.server,
+      url: this.server + '/messages',
       type: 'POST',
       data: JSON.stringify(message),
       contentType: 'application/json',
